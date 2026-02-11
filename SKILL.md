@@ -73,11 +73,10 @@ Use `--sync pad` if the audio is shorter than the video, or `--sync trim` to cut
 
 ## Configuration
 
-The skill reads `VOICE_AI_API_KEY` from (in order):
+The skill reads `VOICE_AI_API_KEY` from:
 
 1. Environment variable `VOICE_AI_API_KEY`
-2. Environment variable `VOICEAI_API_KEY` (alternate)
-3. `.env` file in the skill root
+2. `.env` file in the skill root (only `VOICE_AI_API_KEY` is read — other variables are ignored)
 
 ```bash
 echo 'VOICE_AI_API_KEY=your-key-here' > .env
