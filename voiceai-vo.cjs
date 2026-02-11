@@ -3019,10 +3019,6 @@ var require_commander = __commonJS({
   }
 });
 
-// src/cli.ts
-var import_node_fs = require("node:fs");
-var import_node_path8 = require("node:path");
-
 // node_modules/commander/esm.mjs
 var import_index = __toESM(require_commander(), 1);
 var {
@@ -4918,17 +4914,6 @@ async function voicesCommand(opts) {
 }
 
 // src/cli.ts
-try {
-  const envPath = (0, import_node_path8.resolve)(process.cwd(), ".env");
-  const envContent = (0, import_node_fs.readFileSync)(envPath, "utf-8");
-  for (const line of envContent.split("\n")) {
-    const match = line.match(/^\s*VOICE_AI_API_KEY\s*=\s*(.+?)\s*$/);
-    if (match && !process.env.VOICE_AI_API_KEY) {
-      process.env.VOICE_AI_API_KEY = match[1].replace(/^["']|["']$/g, "");
-    }
-  }
-} catch {
-}
 var program2 = new Command();
 program2.name("voiceai-vo").description("Voice.ai Creator Voiceover Pipeline \u2014 script \u2192 segments \u2192 master \u2192 video").version("0.1.0");
 program2.command("build").description("Build a voiceover from a script file").requiredOption("-i, --input <path>", "Path to script file (.txt or .md)").requiredOption("-v, --voice <id>", "Voice ID (run `voices` to discover)").option("-t, --title <title>", "Project title (defaults to filename)").option("--template <name>", "Template: youtube, podcast, or shortform").option("--mode <mode>", "Chunk mode: headings or auto (default: headings for .md)").option("--max-chars <n>", "Max characters per auto-chunk (default: 1500)").option("--language <code>", "Language code (default: en)").option("--video <path>", "Input video file for muxing").option("--mux", "Enable video muxing (requires --video)").option("--sync <policy>", "Sync policy: shortest, pad, trim (default: shortest)").option("--force", "Force re-render all segments (ignore cache)").option("--mock", "Run in mock mode (no real API calls)").option("-o, --out <dir>", "Custom output directory").action(buildCommand);

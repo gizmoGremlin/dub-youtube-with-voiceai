@@ -1,7 +1,7 @@
 ---
 name: dub-youtube-with-voiceai
 description: "Dub YouTube videos with Voice.ai TTS. Turn scripts into publish-ready voiceovers with chapters, captions, and audio replacement for YouTube long-form and Shorts."
-version: 0.1.1
+version: 0.1.2
 env:
   - VOICE_AI_API_KEY
 required_env:
@@ -73,14 +73,13 @@ Use `--sync pad` if the audio is shorter than the video, or `--sync trim` to cut
 
 ## Configuration
 
-The skill reads `VOICE_AI_API_KEY` from:
-
-1. Environment variable `VOICE_AI_API_KEY`
-2. `.env` file in the skill root (only `VOICE_AI_API_KEY` is read — other variables are ignored)
+Set `VOICE_AI_API_KEY` as an environment variable before running:
 
 ```bash
-echo 'VOICE_AI_API_KEY=your-key-here' > .env
+export VOICE_AI_API_KEY=your-key-here
 ```
+
+The skill does not read `.env` files or access any files for credentials — only the environment variable.
 
 Use `--mock` on any command to run the full pipeline without an API key (produces placeholder audio).
 

@@ -10,7 +10,7 @@ Requires Node.js 20+. No install needed.
 
 ```bash
 # Set your API key
-echo 'VOICE_AI_API_KEY=your-key-here' > .env
+export VOICE_AI_API_KEY=your-key-here
 
 # Dub a YouTube video with AI voiceover
 node voiceai-vo.cjs build \
