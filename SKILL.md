@@ -1,7 +1,7 @@
 ---
 name: dub-youtube-with-voiceai
 description: "Dub YouTube videos with Voice.ai TTS. Turn scripts into publish-ready voiceovers with chapters, captions, and audio replacement for YouTube long-form and Shorts."
-version: 0.1.0
+version: 0.1.1
 env:
   - VOICE_AI_API_KEY
 required_env:

@@ -4,11 +4,9 @@
 
 **📖 Skill documentation: [SKILL.md](SKILL.md)**
 
----
-
 ## Quick start
 
-No install needed — just Node.js 20+ and the bundled CLI file.
+Requires Node.js 20+. No install needed.
 
 ```bash
 # Set your API key
@@ -41,28 +39,12 @@ Get your API key at [voice.ai/dashboard](https://voice.ai/dashboard).
 out/<title>/
   muxed.mp4        # Dubbed video (if --video --mux)
   segments/        # Numbered WAV files
-  master.wav       # Stitched voiceover (ffmpeg)
-  master.mp3       # MP3 for upload (ffmpeg)
+  master.wav       # Stitched voiceover
+  master.mp3       # MP3 for upload
   chapters.txt     # Paste into YouTube description
   captions.srt     # Upload as YouTube subtitles
   description.txt  # Ready-made YouTube description
   review.html      # Interactive review page
-  manifest.json    # Build metadata
-  timeline.json    # Segment timing
-```
-
-## Developer setup
-
-To modify the source code:
-
-```bash
-git clone https://github.com/gizmoGremlin/dub-youtube-with-voiceai.git
-cd dub-youtube-with-voiceai
-
-npm install
-npm run build
-npm run bundle   # Rebuilds voiceai-vo.cjs
-npm test
 ```
 
 ## Learn more
