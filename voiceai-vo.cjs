@@ -4356,7 +4356,8 @@ var VoiceAIClient = class {
       throw new Error(`Voice.ai API error ${res.status}: ${body}`);
     }
     const json = await res.json();
-    const voices = (json.voices ?? []).map((v) => ({
+    const rawVoices = Array.isArray(json) ? json : json.voices ?? [];
+    const voices = rawVoices.map((v) => ({
       id: String(v.voice_id ?? v.id ?? ""),
       name: String(v.name ?? "Unnamed"),
       language: String(v.language ?? "en"),
