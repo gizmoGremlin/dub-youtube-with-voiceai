@@ -66,7 +66,7 @@ Use `--sync pad` if the audio is shorter than the video, or `--sync trim` to cut
 ## Requirements
 
 - **Node.js 20+** — runtime (no npm install needed — the CLI is a single bundled file)
-- **VOICE_AI_API_KEY** — set as environment variable or in a `.env` file in the skill root. Get a key at [voice.ai/dashboard](https://voice.ai/dashboard).
+- **VOICE_AI_API_KEY** — set as an environment variable. Get a key at [voice.ai/dashboard](https://voice.ai/dashboard).
 - **ffmpeg** (optional) — needed for master stitching, MP3 encoding, loudness normalization, and video dubbing. The pipeline still produces individual segments, the review page, chapters, and captions without it.
 
 ---

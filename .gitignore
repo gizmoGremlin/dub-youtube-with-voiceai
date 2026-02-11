@@ -1,9 +1,5 @@
-node_modules/
-dist/
 out/
 tmp/
-.env
 *.tsbuildinfo
 .DS_Store
 Thumbs.db
-package-lock.json
